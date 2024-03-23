@@ -43,7 +43,7 @@ Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 
 ## Social Media
 
-![](assets/social_media_postman.PNG)
+![](assets/Social_media_postman.PNG)
 
 ##   Photo
 
