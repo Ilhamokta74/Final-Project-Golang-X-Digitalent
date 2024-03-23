@@ -4,14 +4,18 @@ Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 
 # Swagger UI
 
+## User
+
+![](assets/user.PNG)
+
 ## Comment
 
-![](assets/comments.png)
+![](assets/comment.PNG)
 
-## Social Media and Photos
+## Social Media
 
-![](assets/photos_and_social_media.png)
+![](assets/social_media.PNG)
 
-## Users
+##   Photo
 
-![](assets/users.png)
+![](assets/photo.PNG)
