@@ -8,6 +8,10 @@ Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 
 ![](assets/user.PNG)
 
+## Authorization
+
+![](assets/auth.PNG)
+
 ## Comment
 
 ![](assets/comment.PNG)
