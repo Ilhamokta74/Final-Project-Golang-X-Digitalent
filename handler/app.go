@@ -71,15 +71,15 @@ func StartApp() {
 
 	photos := app.Group("photos")
 
-	// {
+	{
 
-	// 	photos.Use(authService.Authentication())
+		photos.Use(authService.Authentication())
 
-	// 	photos.POST("", photoHandler.AddPhoto)
-	// 	photos.GET("", photoHandler.GetPhotos)
-	// 	photos.PUT("/:photoId", authService.AuthorizationPhoto(), photoHandler.UpdatePhoto)
-	// 	photos.DELETE("/:photoId", authService.AuthorizationPhoto(), photoHandler.DeletePhoto)
-	// }
+		photos.POST("", photoHandler.AddPhoto)
+		photos.GET("", photoHandler.GetPhotos)
+		photos.PUT("/:photoId", authService.AuthorizationPhoto(), photoHandler.UpdatePhoto)
+		photos.DELETE("/:photoId", authService.AuthorizationPhoto(), photoHandler.DeletePhoto)
+	}
 
 	// comments := app.Group("comments")
 
