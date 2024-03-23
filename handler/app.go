@@ -81,14 +81,14 @@ func StartApp() {
 		photos.DELETE("/:photoId", authService.AuthorizationPhoto(), photoHandler.DeletePhoto)
 	}
 
-	// comments := app.Group("comments")
+	comments := app.Group("comments")
 
-	// {
-	// 	comments.POST("", authService.Authentication(), commentHandler.AddComment)
-	// 	comments.GET("", authService.Authentication(), commentHandler.GetComments)
-	// 	comments.PUT("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.UpdateComment)
-	// 	comments.DELETE("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.DeleteComment)
-	// }
+	{
+		comments.POST("", authService.Authentication(), commentHandler.AddComment)
+		comments.GET("", authService.Authentication(), commentHandler.GetComments)
+		comments.PUT("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.UpdateComment)
+		comments.DELETE("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.DeleteComment)
+	}
 
 	// socialMedias := app.Group("socialmedias")
 
