@@ -71,33 +71,33 @@ func StartApp() {
 
 	photos := app.Group("photos")
 
-	{
+	// {
 
-		photos.Use(authService.Authentication())
+	// 	photos.Use(authService.Authentication())
 
-		photos.POST("", photoHandler.AddPhoto)
-		photos.GET("", photoHandler.GetPhotos)
-		photos.PUT("/:photoId", authService.AuthorizationPhoto(), photoHandler.UpdatePhoto)
-		photos.DELETE("/:photoId", authService.AuthorizationPhoto(), photoHandler.DeletePhoto)
-	}
+	// 	photos.POST("", photoHandler.AddPhoto)
+	// 	photos.GET("", photoHandler.GetPhotos)
+	// 	photos.PUT("/:photoId", authService.AuthorizationPhoto(), photoHandler.UpdatePhoto)
+	// 	photos.DELETE("/:photoId", authService.AuthorizationPhoto(), photoHandler.DeletePhoto)
+	// }
 
-	comments := app.Group("comments")
+	// comments := app.Group("comments")
 
-	{
-		comments.POST("", authService.Authentication(), commentHandler.AddComment)
-		comments.GET("", authService.Authentication(), commentHandler.GetComments)
-		comments.PUT("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.UpdateComment)
-		comments.DELETE("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.DeleteComment)
-	}
+	// {
+	// 	comments.POST("", authService.Authentication(), commentHandler.AddComment)
+	// 	comments.GET("", authService.Authentication(), commentHandler.GetComments)
+	// 	comments.PUT("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.UpdateComment)
+	// 	comments.DELETE("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.DeleteComment)
+	// }
 
-	socialMedias := app.Group("socialmedias")
+	// socialMedias := app.Group("socialmedias")
 
-	{
-		socialMedias.POST("", authService.Authentication(), socialMediaHandler.AddSocialMedia)
-		socialMedias.GET("", authService.Authentication(), socialMediaHandler.GetSocialMedias)
-		socialMedias.PUT("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.UpdateSocialMedia)
-		socialMedias.DELETE("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.DeleteSocialMedia)
-	}
+	// {
+	// 	socialMedias.POST("", authService.Authentication(), socialMediaHandler.AddSocialMedia)
+	// 	socialMedias.GET("", authService.Authentication(), socialMediaHandler.GetSocialMedias)
+	// 	socialMedias.PUT("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.UpdateSocialMedia)
+	// 	socialMedias.DELETE("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.DeleteSocialMedia)
+	// }
 
 	app.Run(":" + config.AppConfig().Port)
 }
