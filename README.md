@@ -1,4 +1,4 @@
-# Final Project 2 - MyGram App
+# Final Project - MyGram App
 
 Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 
