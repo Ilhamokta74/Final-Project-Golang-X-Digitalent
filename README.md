@@ -35,11 +35,11 @@ Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 
 ## Authorization
 
-![](assets/auth.PNG)
+![](assets/auth_postman.PNG)
 
 ## Comment
 
-![](assets/comment.PNG)
+![](assets/comment_postman.PNG)
 
 ## Social Media
 
