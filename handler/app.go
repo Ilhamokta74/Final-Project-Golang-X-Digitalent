@@ -90,14 +90,14 @@ func StartApp() {
 		comments.DELETE("/:commentId", authService.Authentication(), authService.AuthorizationComment(), commentHandler.DeleteComment)
 	}
 
-	// socialMedias := app.Group("socialmedias")
+	socialMedias := app.Group("socialmedias")
 
-	// {
-	// 	socialMedias.POST("", authService.Authentication(), socialMediaHandler.AddSocialMedia)
-	// 	socialMedias.GET("", authService.Authentication(), socialMediaHandler.GetSocialMedias)
-	// 	socialMedias.PUT("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.UpdateSocialMedia)
-	// 	socialMedias.DELETE("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.DeleteSocialMedia)
-	// }
+	{
+		socialMedias.POST("", authService.Authentication(), socialMediaHandler.AddSocialMedia)
+		socialMedias.GET("", authService.Authentication(), socialMediaHandler.GetSocialMedias)
+		socialMedias.PUT("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.UpdateSocialMedia)
+		socialMedias.DELETE("/:socialMediaId", authService.Authentication(), authService.AuthorizationSocialMedia(), socialMediaHandler.DeleteSocialMedia)
+	}
 
 	app.Run(":" + config.AppConfig().Port)
 }
