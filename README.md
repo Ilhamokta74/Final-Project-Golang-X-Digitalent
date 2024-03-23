@@ -23,3 +23,28 @@ Final Projek Kelas Kominfo. Membuat aplikasi MyGram
 ##   Photo
 
 ![](assets/photo.PNG)
+
+
+# ============================================
+
+# Postman
+
+## User
+
+![](assets/user_postman.PNG)
+
+## Authorization
+
+![](assets/auth_postman.PNG)
+
+## Comment
+
+![](assets/comment_postman.PNG)
+
+## Social Media
+
+![](assets/social_media_postman.PNG)
+
+##   Photo
+
+![](assets/photo_postman.PNG)
